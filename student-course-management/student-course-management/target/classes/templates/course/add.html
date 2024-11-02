@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Course</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Add Course</h1>
+        <form th:action="@{/courses/add}" th:object="${course}" method="post">
+            <div class="form-group">
+                <label for="nom">Name:</label>
+                <input type="text" id="nom" class="form-control" th:field="*{nom}" required />
+            </div>
+            <div class="form-group">
+                <label for="credits">Credits:</label>
+                <input type="number" id="credits" class="form-control" th:field="*{credits}" required />
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" class="form-control" th:field="*{description}" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Add Course</button>
+            <a class="btn btn-secondary" href="/courses">Back to Course List</a>
+        </form>
+    </div>
+</body>
+</html>

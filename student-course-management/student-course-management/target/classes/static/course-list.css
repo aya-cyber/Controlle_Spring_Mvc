@@ -1,0 +1,136 @@
+/* Full-screen background gradient */
+body {
+    background: linear-gradient(135deg, #3b3b98, #2c2c54, #706fd3);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #f8f9fa; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container for the card layout */
+.course-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Soft transparent white */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Title styling */
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Alert messages */
+.alert {
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+/* General Button styling */
+.btn-secondary {
+    background-color: #706fd3;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #474787;
+}
+
+.btn-primary {
+    background-color: #33d9b2;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218c74;
+}
+
+/* Table styling */
+.table {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-bordered {
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light transparent border */
+}
+
+.table thead {
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    color: #dcdcdc;
+    font-weight: bold;
+}
+
+.table tbody tr {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Highlight row on hover */
+}
+
+/* Minimized Action Buttons for table */
+.btn-sm {
+    font-size: 0.8rem; /* Smaller font size */
+    padding: 4px 8px; /* Reduced padding */
+    border-radius: 5px; /* Compact rounded corners */
+    margin: 0 2px; /* Small margin between buttons */
+    transition: background 0.3s;
+}
+
+/* Styling for action buttons */
+.btn-info {
+    background-color: #3498db;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #2980b9;
+}
+
+.btn-warning {
+    background-color: #f1c40f;
+    border: none;
+    color: #333333;
+}
+
+.btn-warning:hover {
+    background-color: #e1b10f;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}

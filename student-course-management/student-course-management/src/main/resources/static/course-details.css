@@ -1,0 +1,99 @@
+/* Full-screen background gradient */
+body {
+    background: linear-gradient(135deg, #3b3b98, #2c2c54, #706fd3);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 3rem auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+h1, h2 {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Card styling */
+.card {
+    border: 2px solid #3498db; /* Primary color for border */
+    border-radius: 8px;
+}
+
+/* Card content styling */
+.card-title, .card-text {
+    color: #f8f8fa;
+    font-size: 1.1rem;
+}
+
+.card-title strong {
+    font-weight: bold;
+}
+
+.card-text strong {
+    font-weight: bold;
+}
+
+/* Table styling */
+.table-responsive {
+    margin-top: 1.5rem;
+}
+
+.thead-custom {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #dcdcdc;
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table th, .table td {
+    color: #f8f9fa;
+}
+
+/* Alert messages */
+.alert {
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button styling */
+.btn-secondary {
+    background-color: #706fd3;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #474787;
+}
+
+/* Centered button container */
+.text-center {
+    text-align: center;
+}

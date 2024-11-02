@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter un Nouvel Étudiant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/add-student.css"> <!-- Lien vers le fichier CSS externe -->
+</head>
+<body>
+<div class="container mt-5 p-4">
+    <h1 class="text-center mb-4">Ajouter un Nouvel Étudiant</h1>
+    <form th:action="@{/students/add}" th:object="${student}" method="post" class="animated-form">
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" class="form-control" th:field="*{nom}" required placeholder="Entrez le nom" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" th:field="*{email}" required placeholder="Entrez l'email" />
+        </div>
+        <div class="form-group">
+            <label for="matricule">Matricule</label>
+            <input type="text" id="matricule" class="form-control" th:field="*{matricule}" required placeholder="Entrez le matricule" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+    </form>
+    <div class="text-center mt-4">
+        <a class="btn btn-secondary" th:href="@{/students}">Retourner à la Liste des Étudiants</a>
+    </div>
+</div>
+
+<!-- JS de Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

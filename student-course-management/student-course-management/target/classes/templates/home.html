@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/home.css"> <!-- Link to your updated CSS file -->
+</head>
+<body>
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100 background-image">
+    <div class="content-box text-center p-5 rounded shadow-lg">
+        <h1 class="title">Bienvenue dans le Système de Gestion des Étudiants et des Cours</h1>
+        <p class="subtitle">Ceci est la page d'accueil où vous pouvez naviguer vers différentes sections de l'application.</p>
+
+        <!-- Buttons Container -->
+        <div class="btn-container mt-4">
+            <a class="btn btn-primary btn-animated mx-2" th:href="@{/students}">Voir les Étudiants</a>
+            <a class="btn btn-secondary btn-animated mx-2" th:href="@{/courses}">Voir les Cours</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

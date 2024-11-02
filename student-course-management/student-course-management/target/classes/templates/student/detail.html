@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Détails de l'Étudiant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/student-details.css"> <!-- Lien vers le fichier CSS externe -->
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center">Détails de l'Étudiant</h1>
+
+    <div class="student-info mb-4">
+        <p><strong>Nom:</strong> <span th:text="${student.nom}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${student.email}"></span></p>
+        <p><strong>Matricule:</strong> <span th:text="${student.matricule}"></span></p>
+    </div>
+
+    <!-- Afficher les messages de succès ou d'erreur -->
+    <div th:if="${successMessage}" class="alert alert-success">
+        <p th:text="${successMessage}"></p>
+    </div>
+    <div th:if="${errorMessage}" class="alert alert-danger">
+        <p th:text="${errorMessage}"></p>
+    </div>
+
+    <!-- Formulaire pour supprimer un étudiant -->
+    <form th:action="@{/students/delete(id=${student.id})}" method="post" style="display:inline;">
+        <input type="hidden" name="studentId" th:value="${student.id}" />
+        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirmDelete();">Supprimer l'Étudiant</button>
+    </form>
+
+    <h2>Cours Inscrits</h2>
+    <ul class="list-group mb-3">
+        <li th:each="enrollment : ${student.enrollments}" class="list-group-item d-flex justify-content-between align-items-center">
+            <span th:text="${enrollment.course.nom}"></span>
+            <form th:action="@{/students/denroll}" method="post" style="display:inline;">
+                <input type="hidden" name="enrollmentId" th:value="${enrollment.id}" />
+                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce cours de l\'étudiant ?');">Supprimer</button>
+            </form>
+        </li>
+    </ul>
+
+    <h2>S'inscrire à un Cours</h2>
+    <form th:action="@{/students/enroll}" method="post">
+        <input type="hidden" name="studentId" th:value="${student.id}" />
+        <div class="form-group">
+            <label for="courseId">Sélectionner un Cours:</label>
+            <select id="courseId" name="courseId" class="form-control" required>
+                <option value="" disabled selected>Sélectionnez un cours</option>
+                <option th:each="course : ${courses}" th:value="${course.id}" th:text="${course.nom}"></option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form>
+
+    <a href="/students" class="btn btn-secondary mt-2">Retour à la Liste des Étudiants</a>
+</div>
+
+<!-- Charger les scripts à la fin du body pour de meilleures performances -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function confirmDelete() {
+        return confirm('Êtes-vous sûr de vouloir supprimer cet étudiant ?');
+    }
+</script>
+</body>
+</html>

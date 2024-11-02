@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Modifier l'Étudiant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/student-edit.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center">Modifier l'Étudiant</h1>
+
+    <!-- Formulaire pour modifier les détails de l'étudiant -->
+    <form th:action="@{/students/edit(id=${student.id})}" th:object="${student}" method="post">
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" th:field="*{nom}" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" th:field="*{email}" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="matricule">Numéro d'Inscription :</label>
+            <input type="text" id="matricule" th:field="*{matricule}" class="form-control" required />
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Mettre à Jour</button>
+            <a href="/students" class="btn btn-secondary">Annuler</a>
+        </div>
+    </form>
+</div>
+
+<!-- Chargement des scripts à la fin du corps pour de meilleures performances -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

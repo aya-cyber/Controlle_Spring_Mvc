@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Course Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/course-details.css">
+
+
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Course Details</h1>
+
+    <div class="card mb-4 border-primary"> <!-- Utiliser la couleur primaire pour la bordure de la carte -->
+        <div class="card-body">
+            <h5 class="card-title"><strong>Name:</strong> <span th:text="${course.nom}"></span></h5>
+            <p class="card-text"><strong>Credits:</strong> <span th:text="${course.credits}"></span></p>
+            <p class="card-text"><strong>Description:</strong> <span th:text="${course.description}"></span></p>
+        </div>
+    </div>
+
+    <h2 class="mt-4">Enrolled Students</h2>
+
+    <!-- Display success message if student is removed successfully -->
+    <div th:if="${successMessage}" class="alert alert-success">
+        <p th:text="${successMessage}"></p>
+    </div>
+
+    <!-- Display error message if there's an error -->
+    <div th:if="${errorMessage}" class="alert alert-danger">
+        <p th:text="${errorMessage}"></p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-custom">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Matricule</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${enrolledStudents}">
+                <td th:text="${student.nom}"></td> <!-- Afficher le nom de l'étudiant -->
+                <td th:text="${student.email}"></td> <!-- Afficher l'email de l'étudiant -->
+                <td th:text="${student.matricule}"></td> <!-- Afficher le matricule de l'étudiant -->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/courses" class="btn btn-secondary">Back to Courses List</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* Style général */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Conteneur du formulaire avec animation de couleur et de translation */
+.edit-course-container {
+    background: linear-gradient(135deg, #ffffff, #e9ecef);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: colorShift 5s infinite alternate, slideIn 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.edit-course-container:hover {
+    transform: scale(1.02);
+}
+
+/* Titre avec animation */
+.title {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Style pour les champs du formulaire */
+.form-group label {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #e7f1ff;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Style pour les boutons */
+.button-group .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.button-group .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.button-group .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.button-group .btn-secondary:hover {
+    box-shadow: 0px 4px 8px rgba(108, 117, 125, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        background: linear-gradient(135deg, #ffffff, #e9ecef);
+    }
+    100% {
+        background: linear-gradient(135deg, #f8f9fa, #cce7ff);
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Cours</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/course-list.css"> <!-- Lien vers le fichier CSS externe -->
+</head>
+<body>
+<div class="container course-container mt-5 p-4">
+    <div th:if="${successMessage}" class="alert alert-success text-center">
+        <p th:text="${successMessage}"></p>
+    </div>
+    <div th:if="${errorMessage}" class="alert alert-danger text-center">
+        <p th:text="${errorMessage}"></p>
+    </div>
+
+    <h1 class="title">Cours</h1>
+
+    <div class="button-group d-flex justify-content-center mb-4">
+        <a class="btn btn-secondary mr-2" th:href="@{/}">Accueil</a>
+        <a class="btn btn-primary" th:href="@{/courses/add}">Ajouter un Nouveau Cours</a>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>Nom</th>
+            <th>Crédits</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="course : ${courses}">
+            <td th:text="${course.nom}"></td>
+            <td th:text="${course.credits}"></td>
+            <td th:text="${course.description}"></td>
+            <td>
+                <a class="btn btn-info btn-sm" th:href="@{/courses/detail(id=${course.id})}">Détails</a>
+                <a class="btn btn-warning btn-sm" th:href="@{/courses/edit(id=${course.id})}">Modifier</a>
+                <a class="btn btn-danger btn-sm" th:href="@{/courses/delete(id=${course.id})}">Supprimer</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

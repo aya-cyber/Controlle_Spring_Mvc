@@ -1,0 +1,11 @@
+com\example\student_course_management\controllers\CourseController.class
+com\example\student_course_management\entities\Course.class
+com\example\student_course_management\StudentCourseManagementApplication.class
+com\example\student_course_management\controllers\EnrollmentController.class
+com\example\student_course_management\repositories\EnrollmentRepository.class
+com\example\student_course_management\repositories\CourseRepository.class
+com\example\student_course_management\entities\Enrollment.class
+com\example\student_course_management\repositories\StudentRepository.class
+com\example\App.class
+com\example\student_course_management\entities\Student.class
+com\example\student_course_management\controllers\StudentController.class

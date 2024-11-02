@@ -1,0 +1,121 @@
+/* Full-screen background gradient */
+body {
+    background: linear-gradient(135deg, #3b3b98, #2c2c54, #706fd3);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #f8f9fa; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Soft transparent white */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 3rem auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Title styling */
+h1, h2 {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Student information section */
+.student-info p {
+    font-size: 1.1rem;
+    color: #f8f9fa;
+    margin: 0.5rem 0;
+}
+
+/* Alert messages */
+.alert {
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Form control styling for course selection (dropdown in black) */
+.form-group label {
+    color: #dcdcdc;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #000000; /* Black background for the dropdown */
+    color: #f8f9fa; /* Light text color */
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #1c1c1c; /* Slightly lighter black on focus */
+    color: #f8f9fa;
+    border-color: #ffffff;
+    outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #33d9b2;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #218c74;
+}
+
+.btn-secondary {
+    background-color: #706fd3;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #474787;
+}
+
+/* List group item styling for enrolled courses */
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #f8f9fa;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Minimized delete button styling */
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}

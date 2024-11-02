@@ -1,0 +1,68 @@
+/* Background style */
+.background-image {
+    background-image: url('https://licencegestion.fr/assets/images/blog/licence-gestion/licence-gestion-montpellier-cours-et-debouches.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Transparent frame with animated color-changing border */
+.content-box {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+    padding: 2rem;
+    border-radius: 15px;
+    border: 3px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    animation: borderColorChange 2s infinite;
+}
+
+/* Animation for color-changing border */
+@keyframes borderColorChange {
+    0% { border-color: #4b6584; }   /* Soft dark blue */
+    25% { border-color: #3498db; }  /* Light blue */
+    50% { border-color: #2ecc71; }  /* Green */
+    75% { border-color: #e74c3c; }  /* Red */
+    100% { border-color: #4b6584; } /* Soft dark blue */
+}
+
+/* Professional styling for titles */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dcdcdc; /* Light gray for a professional look */
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0; /* Softer gray for the subtitle */
+}
+
+/* Button color-changing animation */
+@keyframes buttonColorChange {
+    0% { background-color: #4b6584; }   /* Soft dark blue */
+    25% { background-color: #3498db; }  /* Light blue */
+    50% { background-color: #2ecc71; }  /* Green */
+    75% { background-color: #e74c3c; }  /* Red */
+    100% { background-color: #4b6584; } /* Soft dark blue */
+}
+
+.btn-animated {
+    color: #ffffff;
+    animation: buttonColorChange 2s infinite; /* Color-changing background */
+    transition: transform 0.2s;
+    border: none; /* Remove border for a cleaner look */
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.btn-animated:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Button styling */
+.btn-primary, .btn-secondary {
+    color: #ffffff;
+}

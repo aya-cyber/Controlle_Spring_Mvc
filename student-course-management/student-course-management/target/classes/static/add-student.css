@@ -1,0 +1,91 @@
+/* Full-screen background gradient */
+body {
+    background: linear-gradient(135deg, #3b3b98, #2c2c54, #706fd3);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #f8f9fa; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Soft transparent white */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 3rem auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Title styling */
+h1 {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form control styling */
+.form-group label {
+    color: #dcdcdc;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #ffffff; /* White background for input fields */
+    color: #333333; /* Dark text color */
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #888888; /* Light gray placeholder text */
+}
+
+.form-control:focus {
+    background-color: #f0f0f0; /* Slightly darker white on focus */
+    color: #333333;
+    border-color: #ffffff;
+    outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #33d9b2;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    width: 100%; /* Full width for the primary button */
+}
+
+.btn-primary:hover {
+    background-color: #218c74;
+}
+
+.btn-secondary {
+    background-color: #706fd3;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #474787;
+}
+
+/* Centered button container for return link */
+.text-center {
+    text-align: center;
+}
