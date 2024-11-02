@@ -18,17 +18,6 @@ Thymeleaf : Pour le rendu des templates HTML.
 JDBC Driver : Pour la connexion à la base de données MySQL. 
 Spring DevTools : Pour améliorer le développement avec le rechargement automatique.
 
-** Structure de projet:**
- 
-src/
-├── main/
-│   ├── java/ma/ensa/projet/
-│   │   ├── controllers/
-│   │   ├── entities/
-│   │   └── repository/
-│   └── resources/
-│       ├── static/css/
-│       └── templates/
 
 **Base de Données:**
 
