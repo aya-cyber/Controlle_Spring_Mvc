@@ -89,9 +89,9 @@ Voici les principales dépendances utilisées dans le projet :
 - **Tableau de Bord** : Ajouter un tableau de bord pour les statistiques (inscriptions par cours, étudiants inscrits, etc.).
 - **Tests Unitaires et d'Intégration** : Pour garantir la fiabilité de l'application.
 
----
+## Concepteur
+![image](https://github.com/user-attachments/assets/8eaf8597-76a5-4197-8190-2c02d92f65f5)
 
-Ce guide devrait vous permettre de comprendre l'organisation et les fonctionnalités de votre projet Système de Gestion des Étudiants et des Cours, ainsi que les améliorations possibles pour le futur.
 
 
 
